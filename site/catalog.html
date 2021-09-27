@@ -1,31 +1,67 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Каталог - Магазин на диване</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-    <table>
-        <tr>
-            <td><h1>Магазин на диване</h1></td>
-            <td><a href="homepage.html">Главная</a></td>
-            <td><a href="catalog.html">Каталог</a></td>
-            <td><a href="contacts.html">Контакты</a></td>
-            <td><a href="about.html">О нас</a></td>
-        </tr>
-    </table>
-    <h2>Каталог</h2>
-    <table>
-        <tr>
-            <td><img src="src/argo_pic_1.png" alt="Мужская цепь Арго"></td>
-            <td><table>
-                <tr><h3><a href="product_0001.html">Мужская цепь Арго</a></h3></tr>
-                <tr><h3>2500 Р</h3></tr>
-                <tr><p>Цепь для мужчин «Арго» — это аксессуар, который удачно подчеркивает создаваемый образ успешного человека. В меру оригинальная и в то же время консервативная, эта цепь выглядит, как украшение высокого уровня.
-                </p></tr>
-                <tr><i>Артикул: 0001</i></tr>
-            </table></td>
-        </tr>
-    </table>
+    <div class="container">
+        <ul class="header-footer">
+
+            <a class="menu-link" href="homepage.html">
+                <li class="menu-item">
+                    Магазин на&nbsp;диване
+                </li>
+            </a>
+            <a class="menu-link" href="homepage.html">
+                <li class="menu-item">Главная</li>
+            </a>
+            <a class="menu-link" href="catalog.html">
+                <li class="menu-item">Каталог</li>
+            </a>
+            <a class="menu-link" href="contacts.html">
+                <li class="menu-item">Контакты</li>
+            </a>
+            <a class="menu-link" href="about.html">
+                <li class="menu-item">О&nbsp;нас</li>
+            </a>
+
+        </ul>
+        <h2 class="main-header">Каталог</h2>
+        
+        <table>
+            <tr>
+                <td><img src="src/argo_pic_1.png" alt="Мужская цепь Арго"></td>
+                <td>
+                    <table>
+                        <tr>
+                            <h3><a href="product_0001.html">Мужская цепь Арго</a></h3>
+                        </tr>
+                        <tr>
+                            <h3>2500 Р</h3>
+                        </tr>
+                        <tr>
+                            <p>Цепь для мужчин «Арго» — это аксессуар, который удачно подчеркивает создаваемый образ
+                                успешного человека. В меру оригинальная и в то же время консервативная, эта цепь
+                                выглядит, как украшение высокого уровня.
+                            </p>
+                        </tr>
+                        <tr><i>Артикул: 0001</i></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <ul class="header-footer">
+            <li class="menu-item">Магазин на&nbsp;диване</li>
+            <li class="menu-item">8(800)555-35-35</li>
+            <li class="menu-item">lohotron@skam.ru</li>
+        </ul>
+    </div>
+
+
 </body>
+
 </html>

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&display=swap');
+
+body {
+    background: #62efff;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.header-footer {
+    background-color: #f57c00;
+    list-style: none;
+    padding: 10px;
+    margin-top: 0px;
+    height: 20px;
+}
+
+.header-footer > a > li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.header-footer > li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-link:hover {
+    color: white;
+}
+
+.text-link {
+    text-decoration: none;
+    color: darkslateblue;
+}
+
+.text-link:hover {
+    color: rgb(182, 12, 12);
+}
+
+.main-header {
+    text-align: center;
+}
+
+.description {
+    text-align: justify;
+}
+
+.invest {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.invest-pic {
+    width: 600px;
+}
+
+.form {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.button-item {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.btn-1 {
+    border: none;
+    border-radius: 10px;
+    padding: 15px 32px;
+    text-decoration: none;
+    color: white;
+    background: #0B63F6;
+    box-shadow: 0 5px 0 #003CC5;
+    
+}
+
+.btn-1:hover {
+    background: #003CC5;
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+
