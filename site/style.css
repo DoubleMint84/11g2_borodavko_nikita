@@ -5,6 +5,11 @@ body {
     font-family: 'Fira Sans', sans-serif;
 }
 
+a { 
+    text-decoration: none;
+    color: black;
+} 
+
 .container {
     height: 100%;
     width: 100%;
@@ -67,10 +72,12 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
 .button-item {
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
 .btn-1 {
     border: none;
     border-radius: 5px;
@@ -89,3 +96,33 @@ body {
     top: 5px;
 }
 
+.item-card {
+    display: inline-block;
+    width: 400px;
+    margin-top: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    border: 1px solid #c9c9c9;
+    border-radius: 7px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.50);
+    overflow: hidden;
+}
+
+.item-card:hover {
+    outline: 2px solid blue;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-img {
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 62.5%;
+}
+
+.card-button {
+    padding: 20px;
+}
