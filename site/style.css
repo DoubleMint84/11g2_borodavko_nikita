@@ -20,12 +20,13 @@ a {
     list-style: none;
     padding: 10px;
     margin-top: 0px;
-    height: 20px;
+    height: 50px;
 }
 
 .header-footer > a > li {
     display: inline;
     margin-right: 20px;
+    
 }
 
 .header-footer > li {
@@ -57,15 +58,21 @@ a {
 
 .description {
     text-align: justify;
+    text-decoration: none!;
 }
 
 .invest {
-    width: 600px;
     margin: 0 auto;
+    justify-self: center;
+    justify-content: center;
+    object-fit: contain;
 }
 
 .invest-pic {
-    width: 600px;
+    display:block;
+    margin:auto;
+    height: auto;
+    object-fit: contain;
 }
 
 .form {
@@ -96,6 +103,7 @@ a {
     top: 5px;
 }
 
+
 .item-card {
     display: inline-block;
     width: 400px;
@@ -113,8 +121,13 @@ a {
     outline: 2px solid blue;
 }
 
+.item-text {
+    text-decoration: none;
+}
+
 .card-content {
     padding: 20px;
+    text-decoration: none;
 }
 
 .card-img {
@@ -125,4 +138,58 @@ a {
 
 .card-button {
     padding: 20px;
+}
+
+.staff-pic {
+    display: inline-block;
+    width: 500px;
+    margin-top: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.staff-price {
+    display: inline-block;
+    width: 400px;
+    margin-top: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.staff-pic-img {
+    margin:auto;
+    height: auto;
+    object-fit: contain;
+}
+@media screen and (max-width: 800px) {
+    .invest-pic {
+        width: 100%;
+    }
+    .office-map {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .header-footer > a > li {
+        display: list-item;
+        margin-right: 20px;
+        
+    }
+
+    .header-footer > li {
+        display: list-item;
+        margin-right: 20px;
+    }
+
+    .header-footer {
+        height: 140px;
+    }
+
+    .item-card {
+        width: 100%;
+    }
+    
 }
