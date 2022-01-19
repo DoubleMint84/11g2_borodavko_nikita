@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1151bcdf-7c72-4145-84f0-aa219c798336" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/database/query_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/query_unit_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,13 +40,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\ORM" />
       <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\database" />
       <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\database\query_test" />
       <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\database\query_test " />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in query_unit_test.py">
-    <configuration name="query_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.ORM_create">
+    <configuration name="ORM_create" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="11g2_borodavko_nikita" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -55,11 +55,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/database" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ORM" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\database\query_test\query_2.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\ORM\ORM_create.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -140,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ORM_create" />
         <item itemvalue="Python tests.Python tests in query_unit_test.py" />
         <item itemvalue="Python tests.Python tests for query_unit_test.test_db" />
         <item itemvalue="Python.query_main" />
         <item itemvalue="Python.query_3" />
-        <item itemvalue="Python.query_2" />
       </list>
     </recent_temporary>
   </component>
