@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Главная&nbsp;&mdash; Магазин на&nbsp;диване</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <div class="container">
+        <ul class="header-footer">
+
+            <a class="menu-link" href="/">
+                <li class="menu-item">
+                    Магазин на&nbsp;диване
+                </li>
+            </a>
+            <a class="menu-link" href="/">
+                <li class="menu-item">Главная</li>
+            </a>
+            <a class="menu-link" href="catalog">
+                <li class="menu-item">Каталог</li>
+            </a>
+            <a class="menu-link" href="contacts">
+                <li class="menu-item">Контакты</li>
+            </a>
+            <a class="menu-link" href="about">
+                <li class="menu-item">О&nbsp;нас</li>
+            </a>
+
+        </ul>
+        <h2 class="main-header">Главная</h2>
+        <div class="invest">
+            <img class="invest-pic" src="{{ url_for('static', filename='investor.png') }}" alt="Серьезный молодой прогрессивный бизнесмен">
+        </div>
+        <p class="description">
+            Добро пожаловать в&nbsp;наш магазин! Неважно, где вы&nbsp;сейчас находитесь: сидите на&nbsp;диване, едете
+            в&nbsp;транспорте,
+            копаетесь в&nbsp;шахте&nbsp;&mdash; вы&nbsp;можете купить наши &laquo;высококачественные&raquo; товары
+            в&nbsp;любое время суток из&nbsp;любого места! Попробуйте зайти в&nbsp;<a href="catalog"
+                class="text-link">Каталог</a>&nbsp;&mdash; неравнодушными вы
+            точно не&nbsp;останетесь)
+        </p>
+        <hr>
+        <h2 class="main-header">Отзывы рандомных покупателей</h2>
+        <p class="description">Магазин на&nbsp;диване! Для тех кто ценит качество, скорость доставки, профессионализм.
+            Всегда стараюсь заказывать именно в&nbsp;этом магазине.
+            Большой выбор товаров, а&nbsp;самое главное&nbsp;&mdash; не&nbsp;обманывают!
+            Не&nbsp;привозят, например, не&nbsp;соответствующие товару и&nbsp;не&nbsp;подходящие мне по&nbsp;параметрам
+            товары.
+            И&nbsp;это для этого магазина большая редкость!
+            Поэтому я&nbsp;и&nbsp;рекомендую магазин всем своим знакомым.</p>
+        <hr>
+        <ul class="header-footer">
+            <li class="menu-item">Магазин на&nbsp;диване</li>
+            <li class="menu-item">8(800)555-35-35</li>
+            <li class="menu-item">lohotron@skam.ru</li>
+        </ul>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1151bcdf-7c72-4145-84f0-aa219c798336" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-application/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-application/static/argo_pic_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-application/static/investor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-application/templates/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-application/templates/catalog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-application/templates/contacts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-application/templates/homepage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-application/templates/product_0001.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/static/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,17 +44,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web-application/static" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\web-application\static" />
+      <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\web-application\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\web-application\static" />
       <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\ORM" />
       <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\database" />
       <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\database\query_test" />
       <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\database\query_test " />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ORM_create">
+  <component name="RunManager" selected="Python.main">
     <configuration name="ORM_create" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="11g2_borodavko_nikita" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -68,7 +81,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="query_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="11g2_borodavko_nikita" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -76,11 +89,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/database" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web-application" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\database\query_test\query_3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web-application/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -140,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.ORM_create" />
         <item itemvalue="Python tests.Python tests in query_unit_test.py" />
         <item itemvalue="Python tests.Python tests for query_unit_test.test_db" />
         <item itemvalue="Python.query_main" />
-        <item itemvalue="Python.query_3" />
       </list>
     </recent_temporary>
   </component>

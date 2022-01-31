@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог - Магазин на диване</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+</head>
+
+
+<body>
+    
+    <div class="container">
+        <ul class="header-footer">
+
+            <a class="menu-link" href="/">
+                <li class="menu-item">
+                    Магазин на&nbsp;диване
+                </li>
+            </a>
+            <a class="menu-link" href="/">
+                <li class="menu-item">Главная</li>
+            </a>
+            <a class="menu-link" href="catalog">
+                <li class="menu-item">Каталог</li>
+            </a>
+            <a class="menu-link" href="contacts">
+                <li class="menu-item">Контакты</li>
+            </a>
+            <a class="menu-link" href="about">
+                <li class="menu-item">О&nbsp;нас</li>
+            </a>
+
+        </ul>
+        <h2 class="main-header">Каталог</h2>
+        <div class="catalog-items">
+            <div class="item-card">
+                <a class="item-text" href="product/0001">
+                    <div class="card-img" aria-label="Preview of Whizzbang Widget" style="background-image: url({{ url_for('static', filename='argo_pic_1.png') }})">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="name">Мужская цепь Арго</h3>
+                        <h3 class="price">2500 Р</h3>
+                        <p class="description">Цепь для мужчин «Арго» — это аксессуар, который удачно подчеркивает создаваемый образ
+                            успешного человека. В меру оригинальная и в то же время консервативная, эта цепь
+                            выглядит, как украшение высокого уровня.
+                        </p>
+                        <i>Артикул: 0001</i>
+                    </div>
+                </a>
+                <div class="card-button">
+                    <b class="btn-1">Купить</b>
+                </div>
+                
+            
+            </div>
+            <div class="item-card">
+                <a class="item-text" href="product/0001">
+                    <div class="card-img" aria-label="Preview of Whizzbang Widget" style="background-image: url({{ url_for('static', filename='argo_pic_1.png') }})">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="name">Мужская цепь Арго</h3>
+                        <h3 class="price">2500 Р</h3>
+                        <p class="description">Цепь для мужчин «Арго» — это аксессуар, который удачно подчеркивает создаваемый образ
+                            успешного человека. В меру оригинальная и в то же время консервативная, эта цепь
+                            выглядит, как украшение высокого уровня.
+                        </p>
+                        <i>Артикул: 0001</i>
+                    </div>
+                </a>
+                <div class="card-button">
+                    <b class="btn-1">Купить</b>
+                </div>
+                
+            
+            </div>
+        </div>
+        <ul class="header-footer">
+            <li class="menu-item">Магазин на&nbsp;диване</li>
+            <li class="menu-item">8(800)555-35-35</li>
+            <li class="menu-item">lohotron@skam.ru</li>
+        </ul>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>

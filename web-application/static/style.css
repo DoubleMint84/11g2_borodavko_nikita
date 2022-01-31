@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&display=swap');
+
+body {
+    background: #62efff;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+a { 
+    text-decoration: none;
+    color: black;
+} 
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.header-footer {
+    background-color: #f57c00;
+    list-style: none;
+    padding: 10px;
+    margin-top: 0px;
+    height: 50px;
+}
+
+.header-footer > a > li {
+    display: inline;
+    margin-right: 20px;
+    
+}
+
+.header-footer > li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-link:hover {
+    color: white;
+}
+
+.text-link {
+    text-decoration: none;
+    color: darkslateblue;
+}
+
+.text-link:hover {
+    color: rgb(182, 12, 12);
+}
+
+.main-header {
+    text-align: center;
+}
+
+.description {
+    text-align: justify;
+    text-decoration: none!;
+}
+
+.invest {
+    margin: 0 auto;
+    justify-self: center;
+    justify-content: center;
+    object-fit: contain;
+}
+
+.invest-pic {
+    display:block;
+    margin:auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.form {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.button-item {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.btn-1 {
+    border: none;
+    border-radius: 5px;
+    padding: 15px 32px;
+    text-decoration: none;
+    color: white;
+    background: #0B63F6;
+    box-shadow: 0 5px 0 #003CC5;
+    
+}
+
+.btn-1:hover {
+    background: #003CC5;
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+
+
+.item-card {
+    display: inline-block;
+    width: 400px;
+    margin-top: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    border: 1px solid #c9c9c9;
+    border-radius: 7px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.50);
+    overflow: hidden;
+}
+
+.item-card:hover {
+    outline: 2px solid blue;
+}
+
+.item-text {
+    text-decoration: none;
+}
+
+.card-content {
+    padding: 20px;
+    text-decoration: none;
+}
+
+.card-img {
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 62.5%;
+}
+
+.card-button {
+    padding: 20px;
+}
+
+.staff-pic {
+    display: inline-block;
+    width: 500px;
+    margin-top: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.staff-price {
+    display: inline-block;
+    width: 400px;
+    margin-top: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.staff-pic-img {
+    margin:auto;
+    height: auto;
+    object-fit: contain;
+}
+@media screen and (max-width: 800px) {
+    .invest-pic {
+        width: 100%;
+    }
+    .office-map {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .header-footer > a > li {
+        display: list-item;
+        margin-right: 20px;
+        
+    }
+
+    .header-footer > li {
+        display: list-item;
+        margin-right: 20px;
+    }
+
+    .header-footer {
+        height: 140px;
+    }
+
+    .item-card {
+        width: 100%;
+    }
+    
+}
