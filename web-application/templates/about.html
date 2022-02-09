@@ -13,4 +13,17 @@
                 src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0282d3738708dc24c5bda198620058343a804f6ba8993024e5587152632442a5&amp;width=754&amp;height=620&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
         </center>
+        {% if feedback %}
+            <div class="feedback-area">
+                <h3>Отзывы о нашем магазине</h3>
+                {% for feed in feedback %}
+                <div class="feedback">
+                    <div class="login">{{feed.login}}</div>
+                    <div class="text">{{feed.feedback}}</div>
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <h3>Хотите написать отзыв? Переходите в низ страницы <a href="contacts"
+                class="text-link">Контакты</a></h3>
 {% endblock %}

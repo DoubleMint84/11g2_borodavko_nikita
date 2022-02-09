@@ -163,6 +163,25 @@ a {
     height: auto;
     object-fit: contain;
 }
+
+.feedback-area {
+    width: 100%;
+    background-color: rgb(175, 217, 241);
+}
+
+.feedback {
+    width: 100%;
+    background-color: rgb(128, 223, 226);
+    outline: solid rgb(15, 15, 26) 1px;
+    margin: 10px;
+    padding-left: 10px;
+}
+
+.login {
+    font-size: 0.8em;
+    color: rgb(87, 78, 78);
+}
+
 @media screen and (max-width: 800px) {
     .invest-pic {
         width: 100%;

@@ -15,19 +15,29 @@
             <script type="text/javascript" charset="utf-8" async
                 src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0282d3738708dc24c5bda198620058343a804f6ba8993024e5587152632442a5&amp;width=754&amp;height=620&amp;lang=ru_RU&amp;scroll=true"></script>
         </center>
+        {% if feedback %}
+            <div class="feedback-area">
+                <h3>Отзывы о нашем магазине</h3>
+                {% for feed in feedback %}
+                <div class="feedback">
+                    <div class="login">{{feed.login}}</div>
+                    <div class="text">{{feed.feedback}}</div>
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
         <fieldset class="form">
             <legend>У вас есть жалоба или предложение? Обращайтесь!</legend>
-            <form method="GET" action="https://www.google.com/search">
+            <form method="POST">
 
-                Введите ваше имя <input type="text" name="q" placeholder="Например: Иван"> <br>
-                Введите ваш почтовый адрес <input type="email" name="email" placeholder="Например: 666@pochta.ru"><br>
-                Введите ваш телефон <input type="tel" name="tel" placeholder="Например: 81234567890"> <br>
+                Введите ваш логин <input type="text" name="login" placeholder="Например: Иван"> <br>
                 Пишите свой отзыв здесь <br>
-                <textarea name="review" id="" cols="100" rows="10"
+                <textarea name="feedback" id="" cols="100" rows="10"
                     placeholder="Пишите своё сочинение в этом поле"></textarea>
                 <br>
                 <input type="submit">
                 <input type="reset">
             </form>
         </fieldset>
+
 {% endblock %}

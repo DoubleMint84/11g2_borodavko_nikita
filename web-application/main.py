@@ -61,9 +61,9 @@ class Shopping_cart(db.Model):
     item_id = db.Column(db.Integer, db.ForeignKey('items.id'), nullable=False)
     count = db.Column(db.Integer, nullable=False)
     customer = db.relationship('Users',
-                            backref=db.backref('shop_cart', lazy=False))
+                               backref=db.backref('shop_cart', lazy=False))
     item = db.relationship('Items',
-                              backref=db.backref('shop_cart', lazy=False))
+                           backref=db.backref('shop_cart', lazy=False))
 
 
 class Orders(db.Model):
@@ -74,7 +74,7 @@ class Orders(db.Model):
     state = db.Column(db.Integer, nullable=False)
     address_id = db.Column(db.Integer, db.ForeignKey('address.id'), nullable=False)
     customer = db.relationship('Users',
-                            backref=db.backref('order', lazy=False))
+                               backref=db.backref('order', lazy=False))
     address = db.relationship('Address',
                               backref=db.backref('order', lazy=False))
 
@@ -88,13 +88,20 @@ class Order_list(db.Model):
     order = db.relationship('Orders',
                             backref=db.backref('order_ls', lazy=False))
     item = db.relationship('Items',
-                              backref=db.backref('order_ls', lazy=False))
+                           backref=db.backref('order_ls', lazy=False))
 
+
+class Feedback(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    login = db.Column(db.String(80), nullable=True)
+    feedback = db.Column(db.String(500), nullable=True)
 
 
 @app.route('/')
 def load_home_page():
-    return render_template('homepage.html')
+    feedback_list = Feedback.query.all()
+    return render_template('homepage.html', feedback=feedback_list)
+
 
 @app.route('/catalog')
 def load_catalog():
@@ -103,17 +110,28 @@ def load_catalog():
     items = list(filter(lambda x: min_price <= int(x.price) <= max_price, Items.query.all()))
     return render_template('catalog.html', items=items)
 
+
 @app.route('/about')
 def load_about():
-    return render_template('about.html')
+    return render_template('about.html', feedback=Feedback.query.all())
 
-@app.route('/contacts')
+
+@app.route('/contacts', methods=['GET', 'POST'])
 def load_contacts():
-    return render_template('contacts.html')
+    if request.method == 'POST':
+        login = request.form.get('login')
+        text = request.form.get('feedback')
+        if login != '' and text != '':
+            db.session.add(Feedback(login=login, feedback=text))
+            db.session.commit()
+    feedback_list = Feedback.query.all()
+    return render_template('contacts.html', feedback=feedback_list)
+
 
 @app.route('/product/<number>')
 def load_product(number):
     return render_template(f'product.html', item=Items.query.filter_by(id=int(escape(number))).one())
+
 
 if __name__ == '__main__':
     app.run(debug=True)

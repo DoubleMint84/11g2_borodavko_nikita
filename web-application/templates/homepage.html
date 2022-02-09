@@ -14,6 +14,17 @@
             точно не&nbsp;останетесь)
         </p>
         <hr>
+        {% if feedback %}
+            <div class="feedback-area">
+                <h3>Отзывы о нашем магазине</h3>
+                {% for feed in feedback %}
+                <div class="feedback">
+                    <div class="login">{{feed.login}}</div>
+                    <div class="text">{{feed.feedback}}</div>
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
         <h2 class="main-header">Отзывы рандомных покупателей</h2>
         <p class="description">Магазин на&nbsp;диване! Для тех кто ценит качество, скорость доставки, профессионализм.
             Всегда стараюсь заказывать именно в&nbsp;этом магазине.

@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1151bcdf-7c72-4145-84f0-aa219c798336" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/ORM_create.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/ORM_create.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/extrud3r_orm.db" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/extrud3r_orm.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-application/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/templates/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/templates/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/templates/homepage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
