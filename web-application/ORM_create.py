@@ -1,4 +1,4 @@
-from flask import Flask, render_template, escape
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -42,6 +42,7 @@ class Categories(db.Model):
     name = db.Column(db.String(80), nullable=True)
     description = db.Column(db.String(80), nullable=True)
     photo = db.Column(db.String(80), nullable=True)
+
 
 
 class Items(db.Model):
@@ -90,28 +91,16 @@ class Order_list(db.Model):
     item = db.relationship('Items',
                               backref=db.backref('order_ls', lazy=False))
 
-
-
-@app.route('/')
-def load_home_page():
-    return render_template('homepage.html')
-
-@app.route('/catalog')
-def load_catalog():
-    items = Items.query.all()
-    return render_template('catalog.html', items=items)
-
-@app.route('/about')
-def load_about():
-    return render_template('about.html')
-
-@app.route('/contacts')
-def load_contacts():
-    return render_template('contacts.html')
-
-@app.route('/product/<number>')
-def load_product(number):
-    return render_template(f'product.html', item=Items.query.filter_by(id=int(escape(number))).one())
-
-if __name__ == '__main__':
-    app.run(debug=True)
+#db.create_all()
+db.session.add(Items(name='Калибровочный куб 20x20', category_id=1, price=100, description='Простой калибровочный кубик.'))
+db.session.add(Items(name='Кораблик Benchy', category_id=2, price=250, description='Самая популярная модель для печати!'))
+db.session.add(Items(name='Шестеренки в шестеренке', category_id=3, price=400, description='Хороший успокоитель вашей души'))
+db.session.add(Items(name='Голодный кот', category_id=2, price=200, description='Милый пластиковый котик'))
+db.session.add(Items(name='Шкатулка в форме сердца', category_id=3, price=350, description='Храните свои вещи в своем сердце'))
+db.session.add(Items(name='Шкатулка с апертурным механизмом', category_id=3, price=700, description='Храните свои большие вещи в своей большой шкатулке'))
+db.session.add(Items(name='Зажим для упаковок', category_id=3, price=300, description='Вместо узлов - технологичный зажим!'))
+db.session.add(Items(name='Кубический котик', category_id=2, price=175, description='Кубический, но милый)'))
+db.session.add(Items(name='Температурная башня', category_id=1, price=400, description='Её используют для калибровки температуры'))
+db.session.add(Items(name='Vault Boy', category_id=2, price=500, description='War... war never changes...'))
+db.session.add(Items(name='Шкатулка с головоломкой', category_id=3, price=600, description='Сломай свою голову, пока открываешь шкатулочку)'))
+db.session.commit()

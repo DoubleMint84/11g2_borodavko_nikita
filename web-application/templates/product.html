@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{item.name}}{% endblock %}
+{% block content %}
+ <p><i><a onclick="history.back()">Вернуться к каталогу</a></i></p>
+        <h2 class="main-header">{{item.name}}</h2>
+        <div class="staff-blocks">
+            <div class="staff-pic">
+                <img class="staff-pic-img" src="{{ url_for('static', filename='/img/item_' + item.id|string + '.png') }}" alt="{{item.name}}">
+            </div>
+            <div class="staff-price">
+                <h3>{{item.price}} Р<br></h3>
+                <div class="button-item">
+                    <b class="btn-1">Купить</b>
+                </div>
+            </div>
+        </div>
+        <div class="staff-descr">
+                {{item.description}}
+                <br>
+                <i>Артикул: {{item.id}}</i>
+        </div>
+{% endblock %}
