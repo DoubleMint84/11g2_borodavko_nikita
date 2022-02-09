@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1151bcdf-7c72-4145-84f0-aa219c798336" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web-application/ORM_create.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/extrud3r_orm.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/static/img/cathegory_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/static/img/cathegory_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/static/img/item_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/static/img/item_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/static/img/item_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/static/img/item_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/static/img/item_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/static/img/item_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/static/img/item_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/static/img/item_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/static/img/item_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/static/img/item_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/static/img/item_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/templates/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-application/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-application/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-application/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-application/templates/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/templates/catalog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-application/templates/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/templates/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-application/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/templates/homepage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

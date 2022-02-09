@@ -1,4 +1,4 @@
-from flask import Flask, render_template, escape
+from flask import Flask, render_template, escape, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -98,7 +98,9 @@ def load_home_page():
 
 @app.route('/catalog')
 def load_catalog():
-    items = Items.query.all()
+    min_price = int(request.args.get('min_price', 0))
+    max_price = int(request.args.get('max_price', 10e9))
+    items = list(filter(lambda x: min_price <= int(x.price) <= max_price, Items.query.all()))
     return render_template('catalog.html', items=items)
 
 @app.route('/about')
