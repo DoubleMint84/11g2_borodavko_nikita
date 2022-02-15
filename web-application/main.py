@@ -1,8 +1,12 @@
-from flask import Flask, render_template, escape, request
+from flask import Flask, render_template, escape, request, session, flash, redirect, url_for, make_response
 from flask_sqlalchemy import SQLAlchemy
+import sqlalchemy
+from datetime import datetime, timedelta
+import hashlib
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///extrud3r_orm.db'
+app.secret_key = 'secret'
 db = SQLAlchemy(app)
 
 
@@ -25,6 +29,12 @@ class Users(db.Model):
     login = db.Column(db.String(80), nullable=True)
     password_hash = db.Column(db.String(80), nullable=True)
     registration_date = db.Column(db.String(80), nullable=True)
+
+    def validate(self, password):
+        return self.password_hash == hashlib.md5(password.encode('utf8')).hexdigest()
+
+    def set_password(self, password):
+        self.password_hash = hashlib.md5(password.encode('utf8')).hexdigest()
 
 
 class User_address(db.Model):
@@ -97,11 +107,55 @@ class Feedback(db.Model):
     feedback = db.Column(db.String(500), nullable=True)
 
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        login = request.form.get('login')
+        password = request.form.get('password')
+        try:
+            if Users.query.filter_by(login=login).one().validate(password):
+                session['login'] = login
+                flash(f'Welcome back, {login}', 'success')
+                return redirect(url_for('load_home_page'), code=301)
+            flash('Wrong login or password', 'warning')
+        except sqlalchemy.exc.NoResultFound:
+            flash('Wrong login or password', 'danger')
+    return render_template('login.html')
+
+
+@app.route('/logout')
+def logout():
+    if session.get('login'):
+        session.pop('login')
+    return redirect('/', code=302)
+
+@app.route('/<name>', methods=['GET', 'POST'])
+def profile(name):
+    if session.get('login') == name:
+        if (u := Users.query.filter_by(login=login)) is not None:
+            if request.method == 'POST':
+                u = u.one()
+                old = request.form.get('old_password')
+                new = request.form.get('new_password')
+                if old == new:
+                    flash('Новый пароль тот же, что и старый', 'warning')
+                elif u.validate(old):
+                    u.set_password(new)
+                    flash('Пароль изменен', 'success')
+                    db.session.add(u)
+                    db.session.commit()
+            return render_template('profile.html', user=u)
+    flash('Please authenticate', 'warning')
+    return redirect(url_for('login'), code=301)
+
+
 @app.route('/')
 def load_home_page():
     feedback_list = Feedback.query.all()
-    return render_template('homepage.html', feedback=feedback_list)
-
+    resp = make_response(render_template('homepage.html', feedback=feedback_list))
+    if not request.cookies.get('test'):
+        resp.set_cookie('test', 'testvalue', expires=datetime.now() + timedelta(minutes=30))
+    return resp
 
 @app.route('/catalog')
 def load_catalog():
