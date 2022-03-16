@@ -2,12 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1151bcdf-7c72-4145-84f0-aa219c798336" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web-application/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-application/templates/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/requests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-application/extrud3r_orm.db" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/extrud3r_orm.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-application/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-application/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-application/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/ORM_create.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/ORM_create.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/extrud3r_orm.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/extrud3r_orm.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/argo_pic_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/argo_pic_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/img/cathegory_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/img/cathegory_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/img/cathegory_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/img/cathegory_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/img/item_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/img/item_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/img/item_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/img/item_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/img/item_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/img/item_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/img/item_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/img/item_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/img/item_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/img/item_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/img/item_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/img/item_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/img/item_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/img/item_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/img/item_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/img/item_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/img/item_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/img/item_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/img/item_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/img/item_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/img/item_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/img/item_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/investor.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/investor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/templates/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/templates/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/templates/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/templates/product_0001.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/product_0001.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-application/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -46,7 +72,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Учеба/Олимпиады/ШВБ-инфа/2020-2021/Вариант 1/2021-var-1-py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/requests.py" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -63,7 +89,7 @@
       <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\database\query_test " />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.main_application">
     <configuration name="ORM_create (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="11g2_borodavko_nikita" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,6 +153,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main_application" type="PythonConfigurationType" factoryName="Python">
+      <module name="11g2_borodavko_nikita" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\nikit\AppData\Local\Programs\Python\Python310\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/requests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for query_unit_test.test_db" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="11g2_borodavko_nikita" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,6 +202,14 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.main_application" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.ORM_create" />
+      <item itemvalue="Python.ORM_create (1)" />
+      <item itemvalue="Python tests.Python tests for query_unit_test.test_db" />
+      <item itemvalue="Python tests.Python tests in query_unit_test.py" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
