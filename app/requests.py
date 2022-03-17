@@ -27,7 +27,8 @@ def logout():
         session.pop('login')
     return redirect('/', code=302)
 
-@app.route('/<name>', methods=['GET', 'POST'])
+
+@app.route('/profile/<name>', methods=['GET', 'POST'])
 def profile(name):
     if session.get('login') == name:
         if (u := Users.query.filter_by(login=login)) is not None:
@@ -43,8 +44,22 @@ def profile(name):
                     db.session.add(u)
                     db.session.commit()
             return render_template('profile.html', user=u)
+    if session.get('login'):
+        flash('Access denied', 'warning')
+        return redirect(url_for('profile', name=session.get('login')))
     flash('Please authenticate', 'warning')
-    return redirect(url_for('login'), code=301)
+    return redirect(url_for('login'))
+
+
+@app.route('/shopcart')
+def shopcart():
+    if session.get('login'):
+        u = session.get('login')
+        items = Shopping_cart.query.filter_by(customer_id=Users.query.filter_by(login=u).one().id)
+        return render_template('shopcart.html', items=items)
+    else:
+        flash('Please authenticate', 'warning')
+        return redirect(url_for('login'))
 
 
 @app.route('/')
@@ -54,6 +69,7 @@ def load_home_page():
     if not request.cookies.get('test'):
         resp.set_cookie('test', 'testvalue', expires=datetime.now() + timedelta(minutes=30))
     return resp
+
 
 @app.route('/catalog')
 def load_catalog():

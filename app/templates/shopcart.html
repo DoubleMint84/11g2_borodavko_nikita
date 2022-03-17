@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="shopcart">
+    <h2>Корзина</h2>
+    <div class="catalog-items">
+            {% for item in items %}
+            <div class="item-card">
+                <a class="item-text" href="product/{{item.item_id}}">
+                    <div class="card-img" aria-label="Preview of Whizzbang Widget" style="background-image: url({{ url_for('static', filename='/img/item_' + item.id|string + '.png') }})">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="name">{{item.name}}</h3>
+                        <h3 class="price">{{item.price}} Р</h3>
+                        <h3 class="count">{{item.count}} Р</h3>
+                        <i>Артикул: {{item.id}}</i>
+                    </div>
+                </a>
+                <div class="card-button">
+                    <b class="btn btn-warning">Удалить</b>
+                </div>
+
+
+            </div>
+            {% endfor %}
+    </div>
+</div>
+{% endblock %}
