@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+ <p><i><a onclick="history.back()">Вернуться назад</a></i></p>
+    <div class="add-address">
+        <form method="post">
+        <h6> Добавить адрес </h6>
+        <input type="text" class="form-control" name="country"
+            placeholder="Страна" style="margin-top: 10px;">
+        <input type="text" class="form-control" name="city"
+            placeholder="Город" style="margin-top: 10px;">
+        <input type="text" class="form-control" name="street"
+            placeholder="Улица" style="margin-top: 10px;">
+            <input type="text" class="form-control" name="house"
+            placeholder="Дом" style="margin-top: 10px;">
+            <input type="text" class="form-control" name="floor"
+            placeholder="Этаж" style="margin-top: 10px;">
+            <input type="text" class="form-control" name="flat"
+            placeholder="Квартира" style="margin-top: 10px;">
+        <input type="submit" style="margin-top: 10px;" class="buy btn btn-outline-primary" value="Добавить">
+        </form>
+    </div>
+{% endblock %}

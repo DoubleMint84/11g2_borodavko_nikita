@@ -82,18 +82,18 @@ a {
 
 .button-item {
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .btn-1 {
     border: none;
     border-radius: 5px;
-    padding: 15px 32px;
+    padding: 10px 20px;
     text-decoration: none;
     color: white;
     background: #0B63F6;
     box-shadow: 0 5px 0 #003CC5;
-    
+    margin-top: 5px;
 }
 
 .btn-1:hover {
@@ -182,12 +182,21 @@ a {
     color: rgb(87, 78, 78);
 }
 
+@media screen and (max-width: 991px) {
+    .header-footer {
+        height: 94px;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .invest-pic {
         width: 100%;
     }
     .office-map {
         width: 100%;
+    }
+    .header-footer {
+        height: 89px;
     }
 }
 
@@ -200,11 +209,12 @@ a {
 
     .header-footer > li {
         display: list-item;
+        margin-top: 5px;
         margin-right: 20px;
     }
 
     .header-footer {
-        height: 140px;
+        height: 267px;
     }
 
     .item-card {

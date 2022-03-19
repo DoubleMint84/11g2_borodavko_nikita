@@ -9,14 +9,20 @@
             </div>
             <div class="staff-price">
                 <h3>{{item.price}} Р<br></h3>
+                <h3>В корзине: {{count}}</h3>
                 <div class="button-item">
-                    <b class="btn-1">Купить</b>
+
+                        {% if count == 0 %}
+                        <a href="/product/{{item.id}}/buy_one" class="btn-1">В корзину</a>
+                        {% else %}
+                        <a href="/product/{{item.id}}/buy_one" class="btn btn-success"> Добавить еще 1 </a>
+                        <a href="/product/{{item.id}}/del_item" class="btn btn-danger">Убрать из корзины </a>
+                        {% endif %}
                 </div>
             </div>
         </div>
         <div class="staff-descr">
-                {{item.description}}
-                <br>
+            <h5>{{item.description}}</h5>
                 <i>Артикул: {{item.id}}</i>
         </div>
 {% endblock %}

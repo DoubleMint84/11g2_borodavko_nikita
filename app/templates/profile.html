@@ -1,16 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="profile">
-    <h2>Профиль {{user.name}}</h2>
-    <form method="post">
+    <h2>Ваш профиль</h2>
+    <h4>Имя: {{user.name}}</h4>
+    <h4>Фамилия: {{user.surname}}</h4>
+    <h4>Дата рождения(ГГГГ-ММ-ДД): {{user.birthdate}}</h4>
+    <h4>Логин: {{user.login}}</h4>
+    <h4>Дата регистрации(ГГГГ-ММ-ДД): {{user.registration_date}}</h4>
+    <hr>
+    <div class="change-password">
+        <form method="post">
         <h6> Сменить пароль </h6>
-        <input type="password" class="form-control" name="old_password" 
+        <input type="password" class="form-control" name="old_password"
             placeholder="Старый пароль">
-        
-        <input type="password" class="form-control" name="new_password" 
+
+        <input type="password" class="form-control" name="new_password"
             placeholder="Новый пароль" style="margin-top: 10px;">
-        <input type="submit" class="buy btn btn-outline-primary" value="Сменить"
-            >
-    </form>
+        <input type="submit" style="margin-top: 10px;" class="buy btn btn-outline-primary" value="Сменить">
+        </form>
+    </div>
+    <hr>
+    {% if address|length < 1 %}
+    <h3>Похоже, вы еще не добавили свой адрес. Нажав нижнюю кнопку, вы сможете это исправить :)</h3>
+    {% else %}
+    <h3>Ваши адресы доставки: {{address|length}} шт.</h3>
+    {% for i in address %}
+    <div class="address">
+        <h4>{{i.country}}, {{i.city}}</h4>
+        <h5>{{i.street}}, д. {{i.house}}, эт. {{i.floor}}, кв. {{i.flat}}</h5>
+    </div>
+    <hr>
+    {% endfor %}
+    {% endif %}
+    <a href="/add_address" class="btn btn-primary" style="margin-bottom:5px;">Добавить адрес</a>
+
+
 </div>
 {% endblock %}

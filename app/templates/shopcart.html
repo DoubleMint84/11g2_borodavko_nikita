@@ -1,27 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="shopcart">
-    <h2>Корзина</h2>
+    <h2>Корзина: {{items|length}} шт. / Итого: {{ttl_order_price}} р.</h2>
+    {% if items|length < 1 %}
+    <h3>Пока что в вашей корзине пусто. Чтобы это исправить, зайдите в <a href="catalog"
+                class="text-link">Каталог</a> :)</h3>
+    {% else %}
     <div class="catalog-items">
             {% for item in items %}
             <div class="item-card">
-                <a class="item-text" href="product/{{item.item_id}}">
+                <a class="item-text" href="product/{{item.id}}">
                     <div class="card-img" aria-label="Preview of Whizzbang Widget" style="background-image: url({{ url_for('static', filename='/img/item_' + item.id|string + '.png') }})">
                     </div>
                     <div class="card-content">
                         <h3 class="name">{{item.name}}</h3>
-                        <h3 class="price">{{item.price}} Р</h3>
-                        <h3 class="count">{{item.count}} Р</h3>
+                        <h3 class="price">Цена за 1: {{item.price}} Р</h3>
+                        <h3 class="ttl_price">Итого: {{item.ttl_price}} Р</h3>
+                        <h3 class="count">{{item.count}} шт.</h3>
                         <i>Артикул: {{item.id}}</i>
                     </div>
                 </a>
                 <div class="card-button">
-                    <b class="btn btn-warning">Удалить</b>
+                    <a href="/shopcart/{{item.id}}/del_item" class="btn btn-warning">Удалить</a>
                 </div>
 
 
             </div>
             {% endfor %}
     </div>
+    <div class="total-order-price">
+        <h2>Корзина: {{items|length}} шт. / Итого: {{ttl_order_price}} р.</h2>
+    </div>
+    {% endif %}
 </div>
 {% endblock %}

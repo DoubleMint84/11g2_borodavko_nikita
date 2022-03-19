@@ -67,6 +67,9 @@ class Shopping_cart(db.Model):
     item = db.relationship('Items',
                            backref=db.backref('shop_cart', lazy=False))
 
+    def increment(self):
+        self.count += 1
+
 
 class Orders(db.Model):
     id = db.Column(db.Integer, primary_key=True)
