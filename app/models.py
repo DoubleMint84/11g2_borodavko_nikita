@@ -22,6 +22,14 @@ class Users(db.Model):
     password_hash = db.Column(db.String(80), nullable=True)
     registration_date = db.Column(db.String(80), nullable=True)
 
+    def __init__(self, name, surname, birthdate, login, password) -> None:
+        super().__init__()
+        self.name = name
+        self.surname = surname
+        self.birthdate = birthdate
+        self.login = login
+        self.set_password(password)
+
     def validate(self, password):
         return self.password_hash == hashlib.md5(password.encode('utf8')).hexdigest()
 

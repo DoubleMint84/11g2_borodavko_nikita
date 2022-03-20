@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1151bcdf-7c72-4145-84f0-aa219c798336" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/templates/my_orders.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/extrud3r_orm.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/extrud3r_orm.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/requests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/add_address.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/add_address.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/my_orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/my_orders.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/shopcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/shopcart.html" afterDir="false" />
     </list>

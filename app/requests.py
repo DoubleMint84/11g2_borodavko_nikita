@@ -1,3 +1,5 @@
+import re
+
 import werkzeug
 from flask import Flask, render_template, escape, request, session, flash, redirect, url_for, make_response
 from models import *
@@ -23,6 +25,40 @@ class ItemList:
     price: int
     total_price: int
 
+@app.route('/registration', methods=['GET', 'POST'])
+def registration():
+    if session.get('login'):
+        return redirect(url_for('load_home_page'), code=301)
+    if request.method == 'POST':
+        name = request.form.get('name')
+        surname = request.form.get('surname')
+        birthdate = request.form.get('birthdate')
+        login = request.form.get('login')
+        password1 = request.form.get('password1')
+        password2 = request.form.get('password2')
+        if name == '' or surname == '' or birthdate == '' or login == '' or password1 == '' or password2 == '':
+            flash('Заполните все поля', 'warning')
+            return render_template('registration.html')
+        if len(birthdate) != 10 or re.match(r'\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])', birthdate) is None:
+            flash('Некорректная дата рождения', 'warning')
+            return render_template('registration.html')
+        if password1 != password2:
+            flash('Пароли не совпадают', 'warning')
+            return render_template('registration.html')
+        try:
+            Users.query.filter_by(login=login).one()
+            flash("Такой логин уже зарегистрирован, выберите другой логин", "warning")
+            return render_template('registration.html')
+        except sqlalchemy.exc.NoResultFound as e:
+            print(e, e.args)
+            user = Users(name, surname, birthdate, login, password1)
+            db.session.add(user)
+            db.session.commit()
+            session["login"] = login
+            flash(f"Добро пожаловать, {name}!", "success")
+            return redirect(url_for("load_home_page"))
+    return render_template('registration.html')
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -32,7 +68,7 @@ def login():
         try:
             if Users.query.filter_by(login=login).one().validate(password):
                 session['login'] = login
-                flash(f'Welcome back, {login}', 'success')
+                flash(f'С возвращением, {Users.query.filter_by(login=login).one().name}!', 'success')
                 return redirect(url_for('load_home_page'), code=301)
             flash('Wrong login or password', 'warning')
         except sqlalchemy.exc.NoResultFound:

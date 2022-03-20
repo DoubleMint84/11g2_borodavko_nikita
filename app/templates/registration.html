@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Регистрация{% endblock %}
+{% block content %}
+    <div class="registration">
+        <form method="post">
+        <h6> Регистрация </h6>
+        <input type="text" class="form-control" name="name"
+            placeholder="Имя" style="margin-top: 10px;">
+        <input type="text" class="form-control" name="surname"
+            placeholder="Фамилия" style="margin-top: 10px;">
+        <input type="text" class="form-control" name="birthdate"
+            placeholder="Дата рождения (в формате ГГГГ-ММ-ДД)" style="margin-top: 10px;">
+            <input type="text" class="form-control" name="login"
+            placeholder="Логин" style="margin-top: 10px;">
+            <input type="password" class="form-control" name="password1"
+            placeholder="Пароль" style="margin-top: 10px;">
+            <input type="password" class="form-control" name="password2"
+            placeholder="Повторите пароль" style="margin-top: 10px;">
+        <input type="submit" style="margin-top: 10px;" class="buy btn btn-success" value="Зарегистрироваться">
+        </form>
+    </div>
+{% endblock %}
