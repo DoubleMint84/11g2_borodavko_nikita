@@ -2,13 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1151bcdf-7c72-4145-84f0-aa219c798336" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extrud3r_orm.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ORM/ORM_create.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ORM/extrud3r_orm.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/extrud3r_orm.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/extrud3r_database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/query_class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/query_main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/query_test/query_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/query_test/query_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/query_test/query_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/query_unit_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/miro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/query.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/query_2.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/catalog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/contacts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/homepage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/product_0001.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/src/argo_pic_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/src/investor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +76,11 @@
       <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\web-application\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita" />
       <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\web-application\static" />
       <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\ORM" />
       <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\database" />
       <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\database\query_test" />
-      <recent name="C:\Users\nikit\Documents\GitHub\11g2_borodavko_nikita\database\query_test " />
     </key>
   </component>
   <component name="RunManager" selected="Python.main_application">
