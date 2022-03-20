@@ -1,9 +1,7 @@
 import re
-
-import werkzeug
 from flask import Flask, render_template, escape, request, session, flash, redirect, url_for, make_response
-from models import *
-from app import app, db
+from app.models import *
+from app.app import app, db
 import sqlalchemy
 from datetime import datetime, timedelta
 from dataclasses import dataclass
@@ -305,7 +303,3 @@ def my_orders():
             return render_template('my_orders.html', orders=orders, state=state, address=address, items=items)
     flash('Please authenticate', 'warning')
     return redirect(url_for('login'))
-
-
-if __name__ == '__main__':
-    app.run(debug=True)

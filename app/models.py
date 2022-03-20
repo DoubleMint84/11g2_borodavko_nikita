@@ -1,6 +1,6 @@
 import hashlib
 from flask_sqlalchemy import SQLAlchemy
-from app import db
+from app.app import db
 
 class Address(db.Model):
     id = db.Column(db.Integer, primary_key=True)
