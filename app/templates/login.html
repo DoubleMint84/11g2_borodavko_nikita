@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 <form method="POST" class="auth">
-    <input type="text" name="login" class="form-control" placeholder="Enter your login">
-    <input type="password" name="password" class="form-control" placeholder="Your password">
-    <input type="submit" value="Login" class="btn btn-primary">
+    <h3>Вход в профиль</h3>
+    <input type="text" name="login" class="form-control" style="margin-bottom: 10px;" placeholder="Enter your login">
+    <input type="password" name="password" class="form-control" style="margin-bottom: 10px;" placeholder="Your password">
+    <input type="submit" value="Login" style="margin-bottom: 10px;" class="btn btn-primary">
 </form>
 {% endblock %}

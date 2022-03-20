@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="my_orders">
+    <h2>Ваши заказы</h2>
+    {% if orders|length < 1 %}
+    <h3>Пока что вы не сделали ни одного заказа. Чтобы это исправить, зайдите в <a href="catalog"
+                class="text-link">Каталог</a> :)</h3>
+    {% else %}
+    <h3>{{orders|length}} шт.</h3>
+    <div class="orders-items">
+            {% for i in range(orders|length) %}
+        <hr>
+            <div class="order">
+
+                <h4>Заказ №{{orders[i].id}}</h4>
+                <h4>{{orders[i].total}} Р.</h4>
+                <h4>Статус: {{state[i]}} </h4>
+                <h5>Адрес доставки: {{address[i].country}}, {{address[i].city}}, {{address[i].street}}, д. {{address[i].house}}, эт. {{address[i].floor}}, кв. {{address[i].flat}}</h5>
+                <h5>Всего товаров: {{items[i]|length}}</h5>
+                {% for item in items[i] %}
+                    <p>{{item.name}} - {{item.count}} x {{item.price}} р. - {{item.total_price}} Р.</p>
+                {% endfor %}
+
+            </div>
+            {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

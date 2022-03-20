@@ -23,7 +23,7 @@
     {% if address|length < 1 %}
     <h3>Похоже, вы еще не добавили свой адрес. Нажав нижнюю кнопку, вы сможете это исправить :)</h3>
     {% else %}
-    <h3>Ваши адресы доставки: {{address|length}} шт.</h3>
+    <h3>Ваши адреса доставки: {{address|length}} шт.</h3>
     {% for i in address %}
     <div class="address">
         <h4>{{i.country}}, {{i.city}}</h4>

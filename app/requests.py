@@ -1,3 +1,4 @@
+import werkzeug
 from flask import Flask, render_template, escape, request, session, flash, redirect, url_for, make_response
 from models import *
 from app import app, db
@@ -13,6 +14,14 @@ class ShopcartList:
     ttl_price: int
     count: int
     id: int
+
+
+@dataclass
+class ItemList:
+    name: str
+    count: int
+    price: int
+    total_price: int
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -94,10 +103,32 @@ def add_address():
     return redirect(url_for('login'))
 
 
-@app.route('/shopcart')
+@app.route('/shopcart', methods=['GET', 'POST'])
 def shopcart():
-    if session.get('login'):
-        u = session.get('login')
+    if (u := session.get('login')):
+        if request.method == 'POST':
+            try:
+                addr_id = int(request.form['options'])
+                user_id = Users.query.filter_by(login=u).one().id
+                items = Shopping_cart.query.filter_by(customer_id=user_id).all()
+                ttl = 0
+                for i in items:
+                    t = Items.query.filter_by(id=i.item_id).one()
+                    ttl += i.count * t.price
+                order = Orders(customer_id=user_id, date=str(datetime.now())[:16], total=ttl, state=0, address_id=addr_id)
+                db.session.add(order)
+                db.session.flush()
+                order_id = order.id
+                for i in items:
+                    t = Items.query.filter_by(id=i.item_id).one()
+                    db.session.add(Order_list(order_id=order_id, item_id=i.item_id, price_per_item=t.price, count=i.count))
+                db.session.flush()
+                Shopping_cart.query.filter_by(customer_id=user_id).delete()
+                db.session.commit()
+                flash(f'Заказ №{order_id} успешно создан', 'success')
+                return redirect(url_for('my_orders'))
+            except:
+                flash('Выберите адрес доставки', 'warning')
         items = Shopping_cart.query.filter_by(customer_id=Users.query.filter_by(login=u).one().id)
         ls = []
         s = 0
@@ -105,7 +136,13 @@ def shopcart():
             t = Items.query.filter_by(id=item.item_id).one()
             ls.append(ShopcartList(name=t.name, price=t.price, ttl_price=t.price * item.count, count=item.count, id=item.item_id))
             s += t.price * item.count
-        return render_template('shopcart.html', items=ls, ttl_order_price=s)
+        user = Users.query.filter_by(login=u).one()
+        addresses = User_address.query.filter_by(customer_id=user.id).all()
+        # print(addresses[0].customer_id)
+        addr = []
+        for i in addresses:
+            addr.append(Address.query.filter_by(id=i.address_id).one())
+        return render_template('shopcart.html', items=ls, ttl_order_price=s, address=addr)
     else:
         flash('Please authenticate', 'warning')
         return redirect(url_for('login'))
@@ -209,6 +246,29 @@ def load_product(number):
     else:
         count = 0
     return render_template(f'product.html', item=item, count=count)
+
+
+@app.route('/my_orders')
+def my_orders():
+    if (login := session.get('login')):
+        if (u := Users.query.filter_by(login=login)) is not None:
+            u = u.one()
+            orders = Orders.query.filter_by(customer_id=u.id).all()
+            state = []
+            address = []
+            items = []
+            for order in orders:
+                if order.state == 0:
+                    state.append('В обработке')
+                address.append(Address.query.filter_by(id=order.address_id).one())
+                tmp = []
+                for i in Order_list.query.filter_by(order_id=order.id).all():
+                    item = Items.query.filter_by(id=i.item_id).one()
+                    tmp.append(ItemList(name=item.name, count=i.count, price=i.price_per_item, total_price=i.count * i.price_per_item))
+                items.append(tmp)
+            return render_template('my_orders.html', orders=orders, state=state, address=address, items=items)
+    flash('Please authenticate', 'warning')
+    return redirect(url_for('login'))
 
 
 if __name__ == '__main__':

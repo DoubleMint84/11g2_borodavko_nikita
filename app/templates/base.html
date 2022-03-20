@@ -34,9 +34,11 @@
 
             {% if not session['login'] %}
             <li class="menu-item"><a href="/login" class="btn btn-light" >Войти</a></li>
+            <li class="menu-item"><a href="/registration" class="btn btn-success" >Зарегистрироваться</a></li>
             {% else %}
             <li class="menu-item"><a href="/profile/{{session['login']}}" class="btn btn-light"> {{session['login']}} </a></li>
             <li class="menu-item"><a href="/shopcart"  class="btn btn-primary"> Корзина </a></li>
+            <li class="menu-item"><a href="/my_orders"  class="btn btn-success"> Мои заказы </a></li>
             <li class="menu-item"> <a href="/logout"  class="btn btn-danger">Выйти из профиля</a></li>
             {% endif %}
 

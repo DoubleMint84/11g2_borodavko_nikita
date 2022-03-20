@@ -28,9 +28,28 @@
             </div>
             {% endfor %}
     </div>
-    <div class="total-order-price">
+    <div class="total-order-price" style="margin-bottom:10px;">
         <h2>Корзина: {{items|length}} шт. / Итого: {{ttl_order_price}} р.</h2>
+        {% if address|length < 1 %}
+        <h3>Похоже, вы еще не добавили свой адрес, поэтому мы пока не сможем оформить Ваш заказ.
+            Но, нажав нижнюю кнопку, вы сможете это исправить :)</h3>
+        <a href="/add_address" class="btn btn-primary" style="margin-bottom:5px;">Добавить адрес</a>
+        {% else %}
+        <form method="post">
+            <h3>Выберите адрес доставки</h3>
+            {% for i in address %}
+                <input type="radio" name="options" value="{{i.id}}">{{i.country}}, {{i.city}}, {{i.street}}, д. {{i.house}}, эт. {{i.floor}}, кв. {{i.flat}}</input><br>
+            {% endfor %}
+            <input type="submit" style="margin-top: 10px;" class="buy btn btn-success" value="Оформить заказ">
+        </form>
+
     </div>
+
+
+    {% endif %}
+
+
+
     {% endif %}
 </div>
 {% endblock %}
